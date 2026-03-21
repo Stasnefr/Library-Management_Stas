@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "is_read": true
+    },
+    {
+        "id": 2,
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "year": 1945,
+        "is_read": false
+    },
+    {
+        "id": 3,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "year": 1937,
+        "is_read": true
+    }
+]
