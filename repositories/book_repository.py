@@ -39,6 +39,7 @@ class JsonBookRepository(BaseBookRepository):
             with open(self._file_path, "r", encoding="utf-8") as file:
                 data = json.load(file)
         except (FileNotFoundError, json.JSONDecodeError):
+            print("Файл не знайдено:(")
             return []
         return [Book(**item) for item in data]
     

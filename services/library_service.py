@@ -1,7 +1,6 @@
 from typing import List
 import os
 import sys
-from typing import List
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if project_root not in sys.path:
@@ -9,6 +8,7 @@ if project_root not in sys.path:
 
 from repositories.book_repository import BaseBookRepository
 from models.book import Book
+from datetime import datetime
 
 
 class LibraryService:
@@ -18,7 +18,9 @@ class LibraryService:
     def add_book(self, title: str, author: str, year: int) -> Book:
         if not title or not author:
             raise ValueError("Назва та автор обов'язкові")
-        if year < 1000 or year > 2026:
+        
+        current_year = datetime.now().year
+        if year < 1000 or year > current_year:
             raise ValueError("Неправильний рік")
         
         books = self._repo.get_all()

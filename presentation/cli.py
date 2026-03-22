@@ -38,7 +38,7 @@ class LibraryCLI:
                 print("Невідомий вибір. Спробуйте ще раз.")
             
             input("\nНатисніть Enter для продовження...")
-    
+class LibraryIO:
     def _print_menu(self):
         print("\n" + "=" * 40)
         print("       БІБЛІОТЕКА")
